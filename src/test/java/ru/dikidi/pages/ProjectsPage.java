@@ -10,6 +10,10 @@ public class ProjectsPage {
     private SelenideElement companyType = $(".list-item.company");
     private SelenideElement companyOccupation = $("div[data-name='services']");
     private SelenideElement companySpecialization = $(".check-item.show").$("label[for='services-55']");
+    private SelenideElement nextButton = $(".action-btn.next");
+    private SelenideElement radioButtonFilial = $("label[for='one']");
+    private SelenideElement radioButtonQty = $("label[for='small']");
+    private SelenideElement radioButtonExp = $("label[for='first']");
 
     public ProjectsPage createNewProject() {
         addProjectButton.click();
@@ -21,6 +25,11 @@ public class ProjectsPage {
         companyType.click();
         companyOccupation.click();
         companySpecialization.click();
+        nextButton.click();
+        radioButtonFilial.click();
+        radioButtonQty.click();
+        radioButtonExp.click();
+        nextButton.click();
         return this;
     }
 }

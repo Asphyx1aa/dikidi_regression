@@ -31,7 +31,7 @@ public class HomePage {
     }
 
     public HomePage setUserNumber() {
-        mobileNumberInput.setValue("79980000022");
+        mobileNumberInput.setValue("79201291904");
         return this;
     }
 

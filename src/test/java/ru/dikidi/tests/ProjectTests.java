@@ -8,9 +8,23 @@ import ru.dikidi.pages.ProjectsPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class ProjectTests extends TestBase{
+public class ProjectTests extends TestBase {
     HomePage homePage = new HomePage();
     ProjectsPage projectsPage = new ProjectsPage();
+
+    @Test
+    @DisplayName("Успешная регистрация")
+    @Tag("Regression")
+    void checkSuccessfulRegistration() {
+
+    }
+
+    @Test
+    @DisplayName("Успешная авторизация")
+    @Tag("Regression")
+    void checkSuccessfulAuthorization() {
+
+    }
 
     @Test
     @DisplayName("Успешное создание проекта")
@@ -34,8 +48,15 @@ public class ProjectTests extends TestBase{
             projectsPage.createNewProject();
         });
 
-        step("Кликаем на кнопку 'Создать новый проект'", () -> {
+        step("Заполняем форму'", () -> {
             projectsPage.createNewCompany();
         });
+    }
+
+    @Test
+    @DisplayName("Успешное удаление проекта")
+    @Tag("Regression")
+    void checkSuccessfulDeletingProject() {
+
     }
 }
