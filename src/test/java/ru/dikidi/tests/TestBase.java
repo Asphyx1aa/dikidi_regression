@@ -12,5 +12,6 @@ public class TestBase {
         Configuration.baseUrl = "https://test.dikidi.ru/";
         Configuration.browserSize = "1920x1080";
         SelenideLogger.addListener("allure", new AllureSelenide());
+        Configuration.holdBrowserOpen = true;
     }
 }

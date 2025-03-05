@@ -20,10 +20,32 @@ public class ProjectTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Успешная авторизация")
+    @DisplayName("Авторизация по номеру телефона")
     @Tag("Regression")
-    void checkSuccessfulAuthorization() {
+    void checkSuccessfulAuthorizationByPhoneNumber() {
+        step("Открываем сайт https://test.dikidi.ru", () -> {
+            homePage.openPage();
+        });
 
+        step("Открываем модальное окно авторизации", () -> {
+            homePage.openAuthorizationModal();
+        });
+
+        step("Выбираем способ авторизации по номеру телефона", () -> {
+            homePage.clickOnNumberButtonInModal();
+        });
+
+        step("Вводим номер телефона", () -> {
+            homePage.setUserNumber();
+        });
+
+        step("Вводим пароль", () -> {
+            homePage.setUserPassword();
+        });
+
+        step("Подтверждаем вход", () -> {
+            homePage.clickOnSubmitButton();
+        });
     }
 
     @Test

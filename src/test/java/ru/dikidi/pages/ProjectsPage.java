@@ -14,6 +14,11 @@ public class ProjectsPage {
     private SelenideElement radioButtonFilial = $("label[for='one']");
     private SelenideElement radioButtonQty = $("label[for='small']");
     private SelenideElement radioButtonExp = $("label[for='first']");
+    private SelenideElement companyNameInput = $(".name-company").$("input[name='name']");
+    private SelenideElement companyStreetInput = $("input[name='street']");
+    private SelenideElement companyHouseInput = $("input[name='house']");
+    private SelenideElement companyZipcodeInput = $("input[name='zipcode']");
+    private SelenideElement checkbox = $("label[for='conditions']");
 
     public ProjectsPage createNewProject() {
         addProjectButton.click();
@@ -30,6 +35,12 @@ public class ProjectsPage {
         radioButtonQty.click();
         radioButtonExp.click();
         nextButton.click();
+        companyNameInput.setValue("Test");
+        companyStreetInput.setValue("Test");
+        companyHouseInput.setValue("22");
+        companyZipcodeInput.setValue("150000");
+        checkbox.click();
+
         return this;
     }
 }
